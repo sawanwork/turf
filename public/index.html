@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Turf Booking</title><link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="/">PLAY<span>BOOK</span></a><div class="top-actions"><span id="userLabel" class="muted">Book your next game</span><button id="loginOpen" class="btn btn-light">Login</button><button id="logoutBtn" class="btn btn-light hidden">Logout</button><a href="/admin" class="admin-link">Admin</a></div></header>
+<main>
+<section class="hero"><div class="hero-copy"><p class="eyebrow">YOUR GAME. YOUR TIME.</p><h1>Find your game.<br><span>Book your turf.</span></h1><p>Choose a venue, pick a slot and get ready to play.</p><div class="hero-search"><input id="searchInput" placeholder="Search by turf or area"><button class="btn btn-dark" id="searchBtn">Find a turf</button></div></div><div class="hero-art"><div class="hero-ball">●</div><div class="hero-tag">BOOK. PLAY. REPEAT.</div></div></section>
+<section class="section-head"><div><p class="eyebrow">PICK YOUR PLAYGROUND</p><h2>Available turfs</h2></div><span class="muted" id="turfCount"></span></section>
+<div id="turfGrid" class="turf-grid"><div class="loading">Loading turfs…</div></div>
+<section class="feature-strip"><div><b>01</b><span><strong>Choose a turf</strong><small>Explore locations and facilities</small></span></div><div><b>02</b><span><strong>Select a time</strong><small>View live slot availability</small></span></div><div><b>03</b><span><strong>Confirm booking</strong><small>Pay securely or test demo checkout</small></span></div></section>
+</main>
+<footer><span>© <span id="year"></span> PlayBook Turf</span><span>Play more. Plan less.</span></footer>
+<div id="loginModal" class="modal hidden"><div class="modal-card"><button class="close" id="loginClose">×</button><p class="eyebrow">WELCOME BACK</p><h2>Continue to booking</h2><p class="muted">Enter your mobile number to create an account or continue.</p><form id="loginForm"><label>Full name (optional)<input name="name" placeholder="Your name" maxlength="120"></label><label>Mobile number<input name="phone" placeholder="e.g. 9876543210" inputmode="tel" required></label><p class="fine-print" id="loginNotice">Phone OTP verification is currently disabled by the administrator.</p><button class="btn btn-dark full" type="submit">Continue</button><p class="error" id="loginError"></p></form></div></div>
+<div id="bookingModal" class="modal hidden"><div class="modal-card booking-card"><button class="close" id="bookingClose">×</button><div id="bookingContent"></div></div></div>
+<div id="toast" class="toast"></div>
+<script src="/app.js"></script>
+</body></html>
